@@ -6,7 +6,7 @@ computer_score = 0
 options = ["rock", "paper", "scissors"]
 
 while True:
-    user_pick = input("Enter Rock/ Paper/ Scissors or Q to quit: ").lower()
+    user_pick = input("Enter Rock/ Paper/ Scissors or Q to quit: ").lower() #getting user input and converting into lowercase
 
     if user_pick == "q":
         break
@@ -14,10 +14,10 @@ while True:
     if user_pick not in options:
         continue
 
-    random_number = random.randint(0,2)
+    random_number = random.randint(0,2) #generating random numbers
     # rock - 0; paper - 1, scissors - 3
 
-    computer_pick = options[random_number]
+    computer_pick = options[random_number] #using the random number to choose the option of the index from the options list
     print("Computer picked", computer_pick +".")
 
     if user_pick == "rock" and computer_pick == "scissors":
